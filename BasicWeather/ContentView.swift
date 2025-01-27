@@ -33,7 +33,7 @@ struct ContentView: View {
             Spacer()
         }
         .onAppear {
-            WeatherService.fetchWeather(for: "Istanbul") { result in
+            WeatherService.fetchWeather(for: "Ankara") { result in
                 switch result {
                 case .success(let weatherResponse):
                     cityName = weatherResponse.name
@@ -107,7 +107,6 @@ class WeatherService {
         }.resume()
     }
 }
-
 #Preview {
     ContentView()
 }
